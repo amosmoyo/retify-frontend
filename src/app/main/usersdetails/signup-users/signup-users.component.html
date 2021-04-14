@@ -1,1 +1,59 @@
-<p>signup-users works!</p>
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <form action="submit">
+            <div class="user_details">
+                <div class="input_box">
+                    <span class="details">Full name</span>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">User name</span>
+                    <input type="text" placeholder="Enter your username" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">Phone number</span>
+                    <input type="text" placeholder="Enter your phone number" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">Password</span>
+                    <input type="text" placeholder="Enter your password" required>
+                </div>
+                <div class="input_box">
+                    <span class="details">Confirm password</span>
+                    <input type="text" placeholder="Confirm password" required>
+                </div>
+            </div>
+
+            <div class="gender_details">
+                <input type="radio" name="gender" id="dot_1">
+                <input type="radio" name="gender" id="dot_2">
+                <input type="radio" name="gender" id="dot_3">
+
+                <span class="gender_title">Gender</span>
+                <div class="category">
+                    <label for="dot_1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot_2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot_3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+
+</body>
