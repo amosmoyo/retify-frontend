@@ -1,59 +1,91 @@
-<body>
-    <div class="container">
-        <div class="title">Registration</div>
-        <form action="submit">
-            <div class="user_details">
-                <div class="input_box">
-                    <span class="details">Full name</span>
-                    <input type="text" placeholder="Enter your name" required>
-                </div>
-                <div class="input_box">
-                    <span class="details">User name</span>
-                    <input type="text" placeholder="Enter your username" required>
-                </div>
-                <div class="input_box">
-                    <span class="details">Phone number</span>
-                    <input type="text" placeholder="Enter your phone number" required>
-                </div>
-                <div class="input_box">
-                    <span class="details">Email</span>
-                    <input type="text" placeholder="Enter your email" required>
-                </div>
-                <div class="input_box">
-                    <span class="details">Password</span>
-                    <input type="text" placeholder="Enter your password" required>
-                </div>
-                <div class="input_box">
-                    <span class="details">Confirm password</span>
-                    <input type="text" placeholder="Confirm password" required>
-                </div>
-            </div>
-
-            <div class="gender_details">
-                <input type="radio" name="gender" id="dot_1">
-                <input type="radio" name="gender" id="dot_2">
-                <input type="radio" name="gender" id="dot_3">
-
-                <span class="gender_title">Gender</span>
-                <div class="category">
-                    <label for="dot_1">
-                        <span class="dot one"></span>
-                        <span class="gender">Male</span>
-                    </label>
-                    <label for="dot_2">
-                        <span class="dot two"></span>
-                        <span class="gender">Female</span>
-                    </label>
-                    <label for="dot_3">
-                        <span class="dot three"></span>
-                        <span class="gender">Prefer not to say</span>
-                    </label>
-                </div>
-            </div>
-            <div class="button">
-                <input type="submit" value="Register">
-            </div>
-        </form>
+<!--
+<div class="container">
+  <div class="title">Registration</div>
+  <form (ngSubmit)="save(signup)" #signup="ngForm">
+    <div class="user_details">
+      <div class="form-group">
+        <div class="input_box">
+          <label for="fullname">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input_box">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" placeholder="Enter your username" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input_box">
+          <span class="email">Email</span>
+          <input type="text" class="form-control" placeholder="Enter your phone number" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input_box">
+          <label class="details">Password</label>
+          <input type="text" class="form-control" placeholder="Enter your password" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input_box">
+          <label for="Confirm password">Confirm password</label>
+          <input type="text" class="form-control" placeholder="Confirm password" required>
+        </div>
+      </div>
     </div>
 
-</body>
+    <div class="gender_details">
+      <input type="radio" name="gender" id="dot_1">
+      <input type="radio" name="gender" id="dot_2">
+      <input type="radio" name="gender" id="dot_3">
+
+      <span class="gender_title">Gender</span>
+      <div class="category">
+        <label for="dot_1">
+          <span class="dot one"></span>
+          <span class="gender">Male</span>
+        </label>
+        <label for="dot_2">
+          <span class="dot two"></span>
+          <span class="gender">Female</span>
+        </label>
+        <label for="dot_3">
+          <span class="dot three"></span>
+          <span class="gender">Prefer not to say</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="button">
+      <input type="submit" value="Register">
+    </div>
+  </form>
+</div>
+-->
+
+<div class="container register">
+  <div class="row">
+      <div class="col-md-3 register-left">
+          <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+          <h3>Welcome To Retify</h3>
+          <p>The world best rating platform... </p>
+          <input type="submit" name="" [routerLink]="['/users/login/organization']" value="Login"/><br/>
+      </div>
+      <div class="col-md-9 register-right">
+          <ul class="nav nav-tabs d-sm-flex">
+              <li class="nav-item">
+                  <a class="nav-link" id="home-tab" data-toggle="tab" [routerLink]="['organization']" role="tab" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-controls="home" aria-selected="true">Organization</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" [routerLink]="['user']" role="tab" aria-controls="profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-selected="false">User</a>
+              </li>
+          </ul>
+          <br><br>
+          <div class="tab-content mt-sm-4" id="myTabContent" >
+            <router-outlet></router-outlet>
+          </div>
+          <div class="mt-sm-10 signpd"></div>
+      </div>
+  </div>
+</div>

@@ -1,22 +1,25 @@
-<div class="body">
-    <div class="center">
-        <h1>Login</h1>
-        <form action="post">
-            <div class="txt_field">
-                <input type="text" required>
-                <span></span>
-                <label>Username</label>
-            </div>
-            <div class="txt_field">
-                <input type="password" required>
-                <span></span>
-                <label>Password</label>
-            </div>
-            <div class="pass">Forgot Password?</div>
-            <input type="submit" value="Login">
-            <div class="signup_link">
-                Not a member? <a href="signup.html">Sign up</a>
-            </div>
-        </form>
-    </div>
+<div class="container register">
+  <div class="row">
+      <div class="col-md-3 register-left">
+          <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+          <h3>Welcome To Retify</h3>
+          <p>The world best rating platform... </p>
+          <input type="submit" name="" [routerLink]="['/users/signup/organization']" value="Register"/><br/>
+      </div>
+      <div class="col-md-9 register-right">
+          <ul class="nav nav-tabs">
+              <li class="nav-item">
+                  <a class="nav-link" id="home-tab" data-toggle="tab" [routerLink]="['organization']" role="tab" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-controls="home" aria-selected="true">Organization</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" [routerLink]="['user']" role="tab" aria-controls="profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-selected="false">User</a>
+              </li>
+          </ul>
+          <br><br>
+          <div class="tab-content mt-sm-4" id="myTabContent" >
+            <router-outlet></router-outlet>
+          </div>
+          <div class="mt-sm-10 signpd"></div>
+      </div>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light sticky-top">
+<!-- <nav class="navbar navbar-expand-md navbar-light sticky-top">
 
     <button class="navbar-toggler" data-toggle="collapse" data-target="#collapseTarget">
         <span class="navbar-toggler-icon"></span>
@@ -35,4 +35,44 @@
         </ul>
     </div>
 
+</nav>
+-->
+
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+  <div class="container">
+    <a href="" class="navbar-brand">
+      RETIFY
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#amaya">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse d-flex" id="amaya">
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" >
+          <a href="" [routerLink]="['/home']" routerLinkActive="active" class="nav-link" style="font-size: 1.4em;"><i class="fa fa-home"></i></a>
+        </li>
+      </ul>
+
+      <div class="d-flex">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="" class="nav-link" [routerLink]="['/users/dashboard']" routerLinkActive="active"><i class="fa fa-user"></i> Welcome</a>
+          </li>
+          <li class="nav-item">
+            <a href="" [routerLink]="['/users/login/organization']" routerLinkActive="active" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="" [routerLink]="['/users/signup/organization']" routerLinkActive="active" class="nav-link">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href=""  class="nav-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </nav>
