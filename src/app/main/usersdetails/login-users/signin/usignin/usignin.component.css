@@ -1,0 +1,39 @@
+.register-heading{
+  color: #3700B3;
+}
+
+
+.input {
+  width: 100%;
+}
+
+.error input {
+  background-color: rgb(241, 168, 168);
+}
+
+.fa {
+  font-size: 1.4em;
+  color: #450f5a;
+}
+
+#company {
+  min-height: 30vh;
+}
+
+.btnLogin{
+  margin-top: 10%;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1%;
+  background: #3700B3;
+  color: #fff;
+  font-weight: 600;
+  width: 50%;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .btnLogin {
+    float: right;
+  }
+}
